@@ -11,7 +11,7 @@ import static net.vampkyivua.hedgehog.Grid.Node;
 public class PathFinder {
     private static final Logger log = Logger.getLogger("main");
 
-    // A* algorithm using max cost as optimal
+    // Dijkstra algorithm using max cost as optimal
     Path findPath(Grid grid) {
         Pair<Integer, Integer> size = grid.size();
         Node start = grid.get(0, 0);
@@ -43,9 +43,6 @@ public class PathFinder {
             log.finer("frontier:" + frontier);
             log.finer("---------");
         }
-
-        if (!cameFrom.containsKey(goal))
-            throw new HedgehogException("Oops! Couldn't find a way");
 
         Path path = new Path();
         Node curr = goal;
