@@ -6,7 +6,8 @@ Hedgehog path task
 
 # Test examples are located under data/input
 ```
-$ mkdir -p ./data/output
+$ cd <download dir>
+$ mkdir ./data/output
 $ JVM_OPTS=-Dhedgehog.verbose ./bin/run.sh ./data/input/3x5_pre_1.txt ./data/output/3x5_pre_1.txt
 Usage: ./bin/run.sh <inputFilePath> [outputFilePath]
 Grid: 
